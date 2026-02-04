@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arab AI Agency | AI Solutions for Dubai & UAE Businesses</title>
+    <meta name="description" content="Dubai's premier AI agency. We make your business the #1 recommendation in ChatGPT, Gemini, and AI search results. Arabic & English AI automation.">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Arab AI Agency | AI Dominance for UAE Businesses">
+    <meta property="og:description" content="When customers ask AI 'Find best service in Dubai' - we make sure it recommends YOU.">
+    <meta property="og:image" content="https://arabai.agency/images/og-image.jpg">
+    <meta property="og:url" content="https://arabai.agency">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0c2461',
+                        secondary: '#fbc531',
+                        accent: '#1e3799'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2s infinite linear',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #0c2461;
+            --secondary: #fbc531;
+            --accent: #1e3799;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Shimmer Button */
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 3s infinite;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        
+        /* Typewriter Effect */
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid var(--secondary);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--secondary); }
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Staggered Animation */
+        .stagger-animation > * {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+        
+        .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+        .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+        .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+        .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+        .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Particle Background */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(251, 197, 49, 0.3);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 py-4 glass" data-aos="fade-down">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">AI</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-primary">Arab AI Agency</h1>
+                        <p class="text-xs text-gray-600">Dubai • Riyadh • Doha</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-primary transition font-medium">Services</a>
+                    <a href="#case-studies" class="text-gray-700 hover:text-primary transition font-medium">Case Studies</a>
+                    <a href="#process" class="text-gray-700 hover:text-primary transition font-medium">Process</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary transition font-medium">Pricing</a>
+                    <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-accent transition-all transform hover:scale-105">
+                        Get AI Audit <i class="ml-2 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-primary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col space-y-4">
+                    <a href="#services" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="#case-studies" class="text-gray-700 hover:text-primary transition">Case Studies</a>
+                    <a href="#process" class="text-gray-700 hover:text-primary transition">Process</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary transition">Pricing</a>
+                    <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full text-center">Get AI Audit</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #0c2461 0%, #1e3799 100%);">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column -->
+                <div class="text-white" data-aos="fade-right">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full mb-6">
+                        <span class="text-sm font-medium">🚀 Dubai's #1 AI Agency</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        When AI Searches For<br>
+                        <span class="typewriter text-secondary">Arab Businesses</span>
+                    </h1>
+                    
+                    <p class="text-xl mb-8 text-gray-200">
+                        We make sure it finds <span class="font-bold text-white">YOU</span>. Get recommended first in ChatGPT, Gemini, and AI assistants when customers search for your services in Dubai.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#contact" class="bg-secondary text-gray-900 px-8 py-4 rounded-full font-bold text-lg text-center hover:bg-yellow-400 transition-all transform hover:scale-105 shimmer-btn">
+                            <i class="fas fa-chart-bar mr-2"></i> Get Free AI Audit
+                        </a>
+                        <a href="#case-studies" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg text-center hover:bg-white hover:text-primary transition-all">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Demo
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="mt-12 flex flex-wrap items-center gap-6">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-secondary"></i>
+                            </div>
+                            <span>No Contract Required</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-bolt text-secondary"></i>
+                            </div>
+                            <span>48-Hour Implementation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Animated Dashboard -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="300">
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition duration-500">
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="text-sm font-medium text-gray-600">Live AI Dashboard</div>
+                        </div>
+                        
+                        <!-- Animated Chart -->
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">AI Visibility Score</span>
+                                <span class="text-primary font-bold">94%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full w-0" id="scoreBar"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Metrics -->
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-gray-50 rounded-xl">
+                                <div class="text-2xl font-bold text-primary" id="counter1">0</div>
+                                <div class="text-sm text-gray-600">AI Mentions</div>
+                            </div>
+                            <div class="text-center p-4 bg-gray-50 rounded-xl">
+                                <div class="text-2xl font-bold text-primary" id="counter2">0%</div>
+                                <div class="text-sm text-gray-600">Arabic Accuracy</div>
+                            </div>
+                            <div class="text-center p-4 bg-gray-50 rounded-xl">
+                                <div class="text-2xl font-bold text-primary" id="counter3">0</div>
+                                <div class="text-sm text-gray-600">New Leads</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Recommendations -->
+                        <div class="border-t pt-6">
+                            <h4 class="font-bold text-gray-800 mb-4">AI Recommending Right Now:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                                            <i class="fas fa-utensils text-white text-sm"></i>
+                                        </div>
+                                        <span class="font-medium">Dubai Restaurant</span>
+                                    </div>
+                                    <span class="text-green-600 font-bold">+42%</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                                            <i class="fas fa-stethoscope text-white text-sm"></i>
+                                        </div>
+                                        <span class="font-medium">Dubai Clinic</span>
+                                    </div>
+                                    <span class="text-blue-600 font-bold">+67%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-secondary rounded-full opacity-20 floating"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full opacity-10 floating" style="animation-delay: 2s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Solutions That <span class="gradient-text">Convert</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We don't just build AI tools - we build AI that brings you customers 24/7.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AI Answer Dominance</h3>
+                    <p class="text-gray-600 mb-6">Make ChatGPT, Gemini, and Perplexity recommend your business FIRST when customers ask AI assistants.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Optimized for Arabic & English queries</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Competitor displacement strategy</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Monthly AI ranking reports</span>
+                        </li>
+                    </ul>
+                    <div class="text-primary font-bold text-xl">From AED 2,000/month</div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fab fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">24/7 AI WhatsApp Agent</h3>
+                    <p class="text-gray-600 mb-6">Arabic & English AI that books appointments, takes orders, and answers customers while you sleep.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Natural Arabic conversation</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Payment collection integration</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Lead qualification & CRM sync</span>
+                        </li>
+                    </ul>
+                    <div class="text-primary font-bold text-xl">From AED 3,500/month</div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AI Competitor Intelligence</h3>
+                    <p class="text-gray-600 mb-6">We monitor what AI says about competitors and make sure it recommends YOU instead.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Real-time AI mention tracking</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Competitor weakness analysis</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Automated response optimization</span>
+                        </li>
+                    </ul>
+                    <div class="text-primary font-bold text-xl">From AED 1,500/month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies -->
+    <section id="case-studies" class="py-20 px-6" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Results That <span class="text-primary">Speak</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real businesses. Real AI transformation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Case Study 1 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-500" data-aos="fade-right">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-utensils text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl">Luxury Restaurant</h4>
+                                    <p class="text-gray-600">Jumeirah, Dubai</p>
+                                </div>
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-4 py-1 rounded-full font-bold">+67%</span>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6">"Before Arab AI Agency, we were invisible when tourists asked ChatGPT for 'romantic dinner in Dubai'. Now we're the #1 recommendation."</p>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">AI Recommendation Rate</span>
+                                    <span class="font-bold text-primary">94%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 94%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between pt-4 border-t">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">42</div>
+                                    <div class="text-sm text-gray-600">Daily AI Leads</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">AED 78K</div>
+                                    <div class="text-sm text-gray-600">Monthly Revenue</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">0</div>
+                                    <div class="text-sm text-gray-600">Staff Added</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-500" data-aos="fade-left" data-aos-delay="200">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-stethoscope text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl">Dental Clinic</h4>
+                                    <p class="text-gray-600">Dubai Healthcare City</p>
+                                </div>
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-4 py-1 rounded-full font-bold">+89%</span>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6">"Our Arabic-speaking AI WhatsApp agent books appointments 24/7 and handles insurance queries. We expanded to 2 new locations without adding staff."</p>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Arabic Query Resolution</span>
+                                    <span class="font-bold text-primary">98%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-secondary to-yellow-400 rounded-full" style="width: 98%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between pt-4 border-t">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">156</div>
+                                    <div class="text-sm text-gray-600">Monthly Bookings</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">24/7</div>
+                                    <div class="text-sm text-gray-600">Availability</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">72%</div>
+                                    <div class="text-sm text-gray-600">Cost Reduction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process -->
+    <section id="process" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Make You <span class="text-primary">AI-First</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A proven 4-step process that delivers results in days, not months.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-white text-3xl font-bold">1</span>
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 w-full h-1 bg-gray-200 -z-10 hidden lg:block" style="transform: translateX(-50%);"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI Visibility Audit</h3>
+                    <p class="text-gray-600">We analyze what ChatGPT, Gemini, and AI assistants say about your business vs competitors.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-secondary to-yellow-400 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-white text-3xl font-bold">2</span>
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 w-full h-1 bg-gray-200 -z-10 hidden lg:block" style="transform: translateX(-50%);"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Strategy & Planning</h3>
+                    <p class="text-gray-600">We create a customized AI dominance plan targeting your specific customer queries.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-white text-3xl font-bold">3</span>
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 w-full h-1 bg-gray-200 -z-10 hidden lg:block" style="transform: translateX(-50%);"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Implementation</h3>
+                    <p class="text-gray-600">Our AI experts implement the solution in 48 hours. No tech skills needed on your end.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-white text-3xl font-bold">4</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Optimization & Reporting</h3>
+                    <p class="text-gray-600">Monthly AI performance reports and continuous optimization based on results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #0c2461 0%, #1e3799 100%);">
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-4xl mx-auto text-center text-white" data-aos="zoom-in">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Stop Being Invisible to AI</h2>
+                <p class="text-xl mb-8 text-gray-200">The wealthiest, most tech-savvy customers now use AI instead of Google. If you're not optimized, you're losing them to competitors.</p>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Free AI Visibility Audit</h3>
+                    <p class="text-gray-600 mb-8">We'll show you exactly what AI says about your business and 3 competitors. No commitment.</p>
+                    
+                    <form id="auditForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary" required>
+                            <input type="email" placeholder="Business Email" class="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="tel" placeholder="WhatsApp Number" class="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary" required>
+                            <input type="text" placeholder="Business Name" class="px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Business Website (if any)" class="w-full px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <button type="submit" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg w-full hover:bg-accent transition-all transform hover:scale-105">
+                            Get My Free AI Audit <i class="ml-2 fas fa-arrow-right"></i>
+                        </button>
+                        <p class="text-sm text-gray-500">We'll respond within 2 hours during business days.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-secondary rounded-full opacity-10 floating" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full opacity-5 floating" style="animation-delay: 3s;"></div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Column 1 -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                            <span class="text-gray-900 font-bold">AI</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Arab AI Agency</h3>
+                            <p class="text-sm text-gray-400">AI-First Marketing</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Making Arab businesses the #1 recommendation in AI search results.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AI Answer Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AI WhatsApp Agents</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Competitor AI Intelligence</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Arabic AI Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Industries</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Healthcare & Clinics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Restaurants & F&B</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Real Estate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Professional Services</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-secondary"></i>
+                            <span class="text-gray-400">Dubai, UAE</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-secondary"></i>
+                            <span class="text-gray-400">+971 50 XXX XXXX</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-secondary"></i>
+                            <span class="text-gray-400">contact@arabai.agency</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#contact" class="bg-secondary text-gray-900 px-6 py-3 rounded-full font-bold inline-block hover:bg-yellow-400 transition">
+                            Book AI Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2026 Arab AI Agency. All rights reserved. | Making Dubai businesses AI-visible since 2026.</p>
+                <p class="mt-2 text-sm">Designed for impact. Built for results.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/971501234567?text=Hi%20Arab%20AI%20Agency,%20I%20want%20a%20free%20AI%20audit" 
+       class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 z-50"
+       target="_blank">
+       <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+    
+    <!-- Back to Top -->
+    <button id="backToTop" 
+            class="fixed bottom-24 right-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-accent transition-all opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            once: false,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.remove('opacity-100', 'visible');
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Animated Counters
+        function animateCounter(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTime = null;
+            
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = Math.min((timestamp - startTime) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.textContent = id.includes('counter3') ? value : (id.includes('counter2') ? value + '%' : value);
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+            
+            window.requestAnimationFrame(step);
+        }
+        
+        // Trigger counters when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('counter1', 0, 127, 2000);
+                    animateCounter('counter2', 0, 98, 2000);
+                    animateCounter('counter3', 0, 42, 2000);
+                    
+                    // Animate score bar
+                    const scoreBar = document.getElementById('scoreBar');
+                    scoreBar.style.width = '94%';
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('#services'));
+        
+        // Form Submission
+        document.getElementById('auditForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // In a real scenario, you would send this to your server
+            // For now, just show a success message
+            alert('Thank you! We will contact you within 2 hours for your free AI audit. Check your email and WhatsApp.');
+            this.reset();
+        });
+        
+        // Create Particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position and size
+                const size = Math.random() * 20 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+        
+        // Typewriter Effect
+        function typeWriterEffect() {
+            const element = document.querySelector('.typewriter');
+            const text = element.textContent;
+            element.textContent = '';
+            let i = 0;
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                }
+            }
+            
+            setTimeout(type, 1000);
+        }
+        
+        typeWriterEffect();
+    </script>
+</body>
+</html>
