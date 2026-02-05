@@ -1,86 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab AI Agency | AI Solutions for Dubai & UAE</title>
-    <meta name="description" content="Dubai's premier AI agency making businesses #1 in ChatGPT recommendations. Arabic & English AI automation.">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Arab AI Agency | AI Dominance for UAE Businesses">
-    <meta property="og:description" content="When customers ask AI 'Find best service in Dubai' - we make sure it recommends YOU.">
-    <meta property="og:image" content="https://arabai.agency/assets/images/og-image.jpg">
-    <meta property="og:url" content="https://arabai.agency">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- GSAP for advanced animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0c2461',
-                        secondary: '#fbc531',
-                        accent: '#1e3799',
-                        dark: '#0a1931',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        poppins: ['Poppins', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-                        'shimmer': 'shimmer 2s infinite',
-                        'slide-in': 'slideIn 0.5s ease-out',
-                        'bounce-slow': 'bounce 3s infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: 1 },
-                            '50%': { opacity: 0.7, boxShadow: '0 0 20px #fbc531' },
-                        },
-                        shimmer: {
-                            '0%': { backgroundPosition: '-1000px 0' },
-                            '100%': { backgroundPosition: '1000px 0' },
-                        },
-                        slideIn: {
-                            '0%': { transform: 'translateY(100px)', opacity: 0 },
-                            '100%': { transform: 'translateY(0)', opacity: 1 },
-                        }
-                    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arab AI Agency | AI Solutions for Dubai & UAE Businesses</title>
+<meta name="description" content="Dubai's #1 AI agency. Make ChatGPT recommend your business first. Arabic & English AI automation for UAE businesses.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Arab AI Agency | AI Dominance for UAE Businesses">
+<meta property="og:description" content="When customers ask AI 'Find best service in Dubai' - we make sure it recommends YOU.">
+<meta property="og:image" content="https://arabai.agency/assets/images/og-image.jpg">
+<meta property="og:url" content="https://arabai.agency">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Tailwind CSS (for quick styling) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#0c2461',
+                    secondary: '#fbc531',
+                    accent: '#1e3799',
+                },
+                fontFamily: {
+                    sans: ['Inter', 'system-ui'],
+                    poppins: ['Poppins', 'sans-serif'],
+                },
+                animation: {
+                    'float': 'float 6s ease-in-out infinite',
+                    'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                    'shimmer': 'shimmer 3s infinite',
                 }
             }
         }
-    </script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body class="font-sans antialiased">
+    }
+</script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/animations.css">
