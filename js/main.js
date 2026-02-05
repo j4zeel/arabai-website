@@ -44,7 +44,7 @@ function initForms() {
                         <i class="fas fa-check-circle"></i>
                         <h3>Message Sent!</h3>
                         <p>We'll contact you within 2 hours. Check your email and WhatsApp.</p>
-                        <a href="https://wa.me/971501234567" target="_blank" class="btn-primary">
+                        <a href="https://wa.me/971547706679" target="_blank" class="btn-primary">
                             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                         </a>
                     </div>
