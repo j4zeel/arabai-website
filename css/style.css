@@ -1,0 +1,197 @@
+/* Custom CSS for Arab AI Agency */
+
+:root {
+    --primary: #0c2461;
+    --secondary: #fbc531;
+    --accent: #1e3799;
+    --dark: #0a1931;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar styles */
+.nav-link {
+    @apply text-gray-700 hover:text-primary font-medium transition-colors duration-300 relative py-1;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+    @apply w-full;
+}
+
+/* Footer links */
+.footer-link {
+    @apply text-gray-400 hover:text-white transition-colors duration-300 inline-block transform hover:translate-x-2;
+}
+
+/* Social icons */
+.social-icon {
+    @apply w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300;
+}
+
+/* Card hover effects */
+.hover-card {
+    @apply transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl;
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--accent), #4a69bd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Shimmer button */
+.shimmer-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: rotate(30deg) translateX(-100%); }
+    100% { transform: rotate(30deg) translateX(100%); }
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-glow {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(251, 197, 49, 0.7);
+    }
+    50% { 
+        box-shadow: 0 0 20px 10px rgba(251, 197, 49, 0);
+    }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Typing effect */
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--secondary);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--secondary); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Staggered animation for lists */
+.stagger-animation > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Interactive elements */
+.interactive-card {
+    @apply relative overflow-hidden;
+}
+
+.interactive-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 transition-opacity duration-300;
+}
+
+.interactive-card:hover::before {
+    @apply opacity-100;
+}
+
+/* Neumorphism effect for cards */
+.neumorphism {
+    background: #f0f0f0;
+    box-shadow: 20px 20px 60px #cccccc,
+                -20px -20px 60px #ffffff;
+    border-radius: 20px;
+}
+
+/* Loading animations */
+.loading-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.loading-bar-fill {
+    @apply h-full bg-gradient-to-r from-primary to-secondary rounded-full;
+    animation: loading 2s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    50% { width: 100%; }
+    100% { width: 0%; }
+}
