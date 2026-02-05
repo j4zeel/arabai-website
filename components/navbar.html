@@ -1,50 +1,39 @@
-<!-- Navigation -->
-<nav class="fixed w-full z-50 py-4 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
-    <div class="container mx-auto px-6">
-        <div class="flex justify-between items-center">
-            <!-- Logo -->
-            <a href="/" class="flex items-center space-x-3 group">
-                <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span class="text-white text-xl font-bold">AI</span>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-primary">Arab AI Agency</h1>
-                    <p class="text-xs text-gray-600">AI-First Dubai Solutions</p>
-                </div>
+<nav class="navbar">
+    <div class="container nav-container">
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <div class="logo-icon">AI</div>
+            <div class="logo-text">
+                <span class="logo-title">Arab AI Agency</span>
+                <span class="logo-subtitle">Dubai • UAE</span>
+            </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="desktop-menu">
+            <a href="/" class="nav-link active">Home</a>
+            <a href="/services.html" class="nav-link">Services</a>
+            <a href="/case-studies.html" class="nav-link">Case Studies</a>
+            <a href="/contact.html" class="nav-link">Contact</a>
+            <a href="https://wa.me/971501234567" target="_blank" class="nav-button">
+                <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/services.html" class="nav-link">Services</a>
-                <a href="/case-studies.html" class="nav-link">Case Studies</a>
-                <a href="/contact.html" class="nav-link">Contact</a>
-                <a href="https://wa.me/971501234567?text=Hi%20Arab%20AI%20Agency,%20I%20need%20AI%20consultation" 
-                   target="_blank"
-                   class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-accent transition-all duration-300 hover:scale-105 hover:shadow-lg group">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Now
-                    <span class="inline-block group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <button class="lg:hidden text-primary text-2xl" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div class="lg:hidden mt-4 hidden" id="mobileMenu">
-            <div class="flex flex-col space-y-4 py-4">
-                <a href="/" class="text-gray-700 hover:text-primary transition font-medium py-2">Home</a>
-                <a href="/services.html" class="text-gray-700 hover:text-primary transition font-medium py-2">Services</a>
-                <a href="/case-studies.html" class="text-gray-700 hover:text-primary transition font-medium py-2">Case Studies</a>
-                <a href="/contact.html" class="text-gray-700 hover:text-primary transition font-medium py-2">Contact</a>
-                <a href="https://wa.me/971501234567" target="_blank" 
-                   class="bg-primary text-white px-4 py-2.5 rounded-full text-center font-medium mt-2">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                </a>
-            </div>
-        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/services.html" class="mobile-nav-link">Services</a>
+        <a href="/case-studies.html" class="mobile-nav-link">Case Studies</a>
+        <a href="/contact.html" class="mobile-nav-link">Contact</a>
+        <a href="https://wa.me/971501234567" target="_blank" class="mobile-nav-button">
+            <i class="fab fa-whatsapp"></i> WhatsApp Now
+        </a>
     </div>
 </nav>
